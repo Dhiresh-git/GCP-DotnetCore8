@@ -15,11 +15,11 @@ steps:
       
 # Step 3: Copy the artifacts to the Google Cloud Storage bucket
 - name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', '-r', 'HelloWorld.zip', 'gs://dotnetcore8app-artifacts/artifacts/']
+  args: ['cp', '-r', 'HelloWorld.zip', 'gs://dotnetcore8app-artifacts-1/artifacts/']
 
 artifacts:
   objects:
-    location: 'gs://dotnetcore8app-artifacts/artifacts/'
+    location: 'gs://dotnetcore8app-artifacts-1/artifacts/'
     paths: ['HelloWorld.zip']
 options:
   logging: CLOUD_LOGGING_ONLY
